@@ -30,6 +30,7 @@ class Html extends StatelessWidget {
     this.imageProperties,
     this.onImageTap,
     this.showImages = true,
+    this.blockPadding,
   }) : super(key: key);
 
   final String data;
@@ -39,6 +40,7 @@ class Html extends StatelessWidget {
   final OnLinkTap onLinkTap;
   final bool renderNewlines;
   final double blockSpacing;
+  final double blockPadding;
   final bool useRichText;
   final ImageErrorListener onImageError;
   final TextStyle linkStyle;
@@ -80,6 +82,8 @@ class Html extends StatelessWidget {
                 imageProperties: imageProperties,
                 onImageTap: onImageTap,
                 showImages: showImages,
+                blockSpacing: blockSpacing,
+                blockPadding: blockPadding,
               )
             : HtmlOldParser(
                 width: width,
